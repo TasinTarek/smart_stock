@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_smart_web_job_smart_web_job,smart_web_job.smart_web_job,model_smart_web_job_smart_web_job,base.group_user,1,1,1,1

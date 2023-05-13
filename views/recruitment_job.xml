@@ -1,0 +1,35 @@
+<odoo>
+    <template inherit_id="website.homepage" id="recruitment_job" name="Recruitment Template">
+        <xpath expr="//t[@t-call='website.layout']" position="replace">
+        <script type="text/javascript" src="/smart_stock/static/src/js/recruitment.js"></script>
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="row p-5 mt-2" id="jobs_container">
+                    <t t-foreach="jobs" t-as="job">
+                        <div class="col-md-3 col-xs-12">
+                            <div class="card mb-3">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="card-title">
+                                            <t t-esc="job.name" />
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <strong>Department:</strong>
+                                            <t t-esc="job.department_id.name" />
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Location:</strong>
+                                            <t t-esc="job.address_id.city" />
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </xpath>
+    </template>
+</odoo>
